@@ -1,4 +1,3 @@
-# kwu-MOclub
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -43,7 +42,7 @@
   </div>
 
   <!-- 質問 -->
-  <div id="question-container">
+  <div id="question-container" style="display: none;">
     <div class="question" id="q1">
       <p>Q1. 放課後はどう過ごしたい？</p>
       <button onclick="nextQuestion()">おしゃべりしながらゆるっと活動したい</button>
@@ -81,6 +80,8 @@
 
     function startQuiz() {
       document.getElementById('start-screen').classList.remove('active');
+      document.getElementById('start-screen').style.display = 'none';
+      document.getElementById('question-container').style.display = 'block';
       questions[current].classList.add('active');
     }
 
